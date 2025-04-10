@@ -1,5 +1,113 @@
-<h1 align="center">Hi 👋, I'm Anton Luckshman</h1>
-<h3 align="center">A passionate fullstack developer from Sri Lanka</h3>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 200">
+  <style>
+    @keyframes fadeIn {
+      0% { opacity: 0; }
+      100% { opacity: 1; }
+    }
+    
+    @keyframes wave {
+      0% { transform: rotate(0deg); }
+      25% { transform: rotate(15deg); }
+      50% { transform: rotate(0deg); }
+      75% { transform: rotate(-15deg); }
+      100% { transform: rotate(0deg); }
+    }
+    
+    .bg {
+      fill: #f6f8fa;
+    }
+    
+    .letter {
+      font-family: 'Arial', sans-serif;
+      font-weight: bold;
+      opacity: 0;
+    }
+    
+    .hi-letter {
+      font-size: 42px;
+      fill: #0366d6;
+    }
+    
+    .name-letter {
+      font-size: 38px;
+      fill: #2d333b;
+    }
+    
+    .cursor {
+      fill: #0366d6;
+      animation: blink 1s step-end infinite;
+    }
+    
+    .wave-emoji {
+      font-size: 42px;
+      opacity: 0;
+      transform-origin: 70% 70%;
+    }
+    
+    @keyframes blink {
+      from, to { opacity: 1; }
+      50% { opacity: 0; }
+    }
+  </style>
+  
+  <!-- Background -->
+  <rect class="bg" width="800" height="200" rx="10" ry="10"/>
+  
+  <!-- First text: "Hi there" with waving hand emoji -->
+  <text x="220" y="80" class="wave-emoji" style="animation: fadeIn 0.3s ease-out forwards, wave 1.5s 3s infinite; animation-delay: 0.1s;">👋</text>
+  <text x="270" y="80" class="letter hi-letter" style="animation: fadeIn 0.3s ease-out forwards; animation-delay: 0.3s;">H</text>
+  <text x="295" y="80" class="letter hi-letter" style="animation: fadeIn 0.3s ease-out forwards; animation-delay: 0.6s;">i</text>
+  <text x="310" y="80" class="letter hi-letter" style="animation: fadeIn 0.3s ease-out forwards; animation-delay: 0.9s;"> </text>
+  <text x="325" y="80" class="letter hi-letter" style="animation: fadeIn 0.3s ease-out forwards; animation-delay: 1.2s;">t</text>
+  <text x="340" y="80" class="letter hi-letter" style="animation: fadeIn 0.3s ease-out forwards; animation-delay: 1.5s;">h</text>
+  <text x="360" y="80" class="letter hi-letter" style="animation: fadeIn 0.3s ease-out forwards; animation-delay: 1.8s;">e</text>
+  <text x="380" y="80" class="letter hi-letter" style="animation: fadeIn 0.3s ease-out forwards; animation-delay: 2.1s;">r</text>
+  <text x="395" y="80" class="letter hi-letter" style="animation: fadeIn 0.3s ease-out forwards; animation-delay: 2.4s;">e</text>
+  
+  <!-- Second text: "I'm Anton Luckshman" -->
+  <text x="200" y="130" class="letter name-letter" style="animation: fadeIn 0.3s ease-out forwards; animation-delay: 3.0s;">I</text>
+  <text x="210" y="130" class="letter name-letter" style="animation: fadeIn 0.3s ease-out forwards; animation-delay: 3.2s;">'</text>
+  <text x="220" y="130" class="letter name-letter" style="animation: fadeIn 0.3s ease-out forwards; animation-delay: 3.4s;">m</text>
+  <text x="250" y="130" class="letter name-letter" style="animation: fadeIn 0.3s ease-out forwards; animation-delay: 3.6s;"> </text>
+  <text x="265" y="130" class="letter name-letter" style="animation: fadeIn 0.3s ease-out forwards; animation-delay: 3.8s;">A</text>
+  <text x="290" y="130" class="letter name-letter" style="animation: fadeIn 0.3s ease-out forwards; animation-delay: 4.0s;">n</text>
+  <text x="310" y="130" class="letter name-letter" style="animation: fadeIn 0.3s ease-out forwards; animation-delay: 4.2s;">t</text>
+  <text x="325" y="130" class="letter name-letter" style="animation: fadeIn 0.3s ease-out forwards; animation-delay: 4.4s;">o</text>
+  <text x="345" y="130" class="letter name-letter" style="animation: fadeIn 0.3s ease-out forwards; animation-delay: 4.6s;">n</text>
+  <text x="365" y="130" class="letter name-letter" style="animation: fadeIn 0.3s ease-out forwards; animation-delay: 4.8s;"> </text>
+  <text x="380" y="130" class="letter name-letter" style="animation: fadeIn 0.3s ease-out forwards; animation-delay: 5.0s;">L</text>
+  <text x="400" y="130" class="letter name-letter" style="animation: fadeIn 0.3s ease-out forwards; animation-delay: 5.2s;">u</text>
+  <text x="420" y="130" class="letter name-letter" style="animation: fadeIn 0.3s ease-out forwards; animation-delay: 5.4s;">c</text>
+  <text x="440" y="130" class="letter name-letter" style="animation: fadeIn 0.3s ease-out forwards; animation-delay: 5.6s;">k</text>
+  <text x="460" y="130" class="letter name-letter" style="animation: fadeIn 0.3s ease-out forwards; animation-delay: 5.8s;">s</text>
+  <text x="475" y="130" class="letter name-letter" style="animation: fadeIn 0.3s ease-out forwards; animation-delay: 6.0s;">h</text>
+  <text x="495" y="130" class="letter name-letter" style="animation: fadeIn 0.3s ease-out forwards; animation-delay: 6.2s;">m</text>
+  <text x="525" y="130" class="letter name-letter" style="animation: fadeIn 0.3s ease-out forwards; animation-delay: 6.4s;">a</text>
+  <text x="545" y="130" class="letter name-letter" style="animation: fadeIn 0.3s ease-out forwards; animation-delay: 6.6s;">n</text>
+  
+  <!-- Typing cursor -->
+  <rect x="565" y="115" width="3" height="25" class="cursor">
+    <animate attributeName="x" values="395,565" dur="3s" begin="2.4s" fill="freeze" />
+  </rect>
+  
+  <!-- Decorative elements -->
+  <circle cx="150" cy="50" r="8" fill="#0366d6" opacity="0">
+    <animate attributeName="opacity" from="0" to="0.7" dur="0.5s" begin="1s" fill="freeze" />
+    <animate attributeName="r" values="8;12;8" dur="3s" repeatCount="indefinite" begin="1s" />
+  </circle>
+  <circle cx="650" cy="150" r="10" fill="#6f42c1" opacity="0">
+    <animate attributeName="opacity" from="0" to="0.7" dur="0.5s" begin="2s" fill="freeze" />
+    <animate attributeName="r" values="10;15;10" dur="3s" repeatCount="indefinite" begin="2s" />
+  </circle>
+  <circle cx="700" cy="70" r="6" fill="#ea4aaa" opacity="0">
+    <animate attributeName="opacity" from="0" to="0.7" dur="0.5s" begin="3s" fill="freeze" />
+    <animate attributeName="r" values="6;9;6" dur="2.5s" repeatCount="indefinite" begin="3s" />
+  </circle>
+  <circle cx="100" cy="130" r="7" fill="#2188ff" opacity="0">
+    <animate attributeName="opacity" from="0" to="0.7" dur="0.5s" begin="4s" fill="freeze" />
+    <animate attributeName="r" values="7;11;7" dur="2.2s" repeatCount="indefinite" begin="4s" />
+  </circle>
+</svg>
 
 <p align="left"> <img src="https://komarev.com/ghpvc/?username=antonluckshman&label=Profile%20views&color=0e75b6&style=flat" alt="antonluckshman" /> </p>
 # 💫 About Me:

@@ -1,6 +1,6 @@
 <!-- SVG Animation Header -->
 <div align="center">
-  <img src="header-animation.svg" width="800" height="200" alt="Anton Luckshman - Animated Introduction">
+  <img src="typing-animation.svg" width="800" height="200" alt="Anton Luckshman - Animated Introduction">
 </div>
 
 <p align="left"> <img src="https://komarev.com/ghpvc/?username=antonluckshman&label=Profile%20views&color=0e75b6&style=flat" alt="antonluckshman" /> </p>

@@ -1,0 +1,282 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 200">
+  <defs>
+    <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f172a" />
+      <stop offset="100%" stop-color="#1e293b" />
+    </linearGradient>
+    <linearGradient id="textGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#38bdf8" />
+      <stop offset="50%" stop-color="#818cf8" />
+      <stop offset="100%" stop-color="#c084fc" />
+      <animate attributeName="x1" from="0%" to="100%" dur="2s" repeatCount="indefinite" />
+      <animate attributeName="x2" from="100%" to="200%" dur="2s" repeatCount="indefinite" />
+    </linearGradient>
+  </defs>
+  
+  <style>
+    @keyframes blink {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0; }
+    }
+    
+    @keyframes wave {
+      0% { transform: rotate(0deg); }
+      25% { transform: rotate(15deg); }
+      50% { transform: rotate(0deg); }
+      75% { transform: rotate(-15deg); }
+      100% { transform: rotate(0deg); }
+    }
+    
+    @keyframes float {
+      0%, 100% { transform: translateY(0px); }
+      50% { transform: translateY(-10px); }
+    }
+    
+    .letter {
+      font-family: 'Montserrat', 'Arial', sans-serif;
+      font-weight: bold;
+      fill: url(#textGradient);
+    }
+    
+    .waving-hand {
+      font-size: 45px;
+      transform-origin: 70% 70%;
+      animation: wave 1.5s infinite;
+      fill: #ffcc4d;
+    }
+    
+    .cursor {
+      fill: #c084fc;
+      animation: blink 1s step-end infinite;
+    }
+    
+    .decoration {
+      animation: float 3s ease-in-out infinite;
+    }
+  </style>
+  
+  <!-- Background with gradient -->
+  <rect fill="url(#bgGradient)" width="800" height="200" rx="15" ry="15" />
+  
+  <!-- Decorative elements -->
+  <circle cx="150" cy="50" r="8" fill="#38bdf8" opacity="0.3" class="decoration" style="animation-delay: 0.5s">
+    <animate attributeName="r" values="8;12;8" dur="4s" repeatCount="indefinite" />
+  </circle>
+  <circle cx="680" cy="150" r="10" fill="#818cf8" opacity="0.3" class="decoration" style="animation-delay: 1s">
+    <animate attributeName="r" values="10;15;10" dur="3s" repeatCount="indefinite" />
+  </circle>
+  <circle cx="720" cy="70" r="6" fill="#c084fc" opacity="0.3" class="decoration" style="animation-delay: 1.5s">
+    <animate attributeName="r" values="6;9;6" dur="5s" repeatCount="indefinite" />
+  </circle>
+  
+  <!-- Single cursor that moves between lines -->
+  <rect class="cursor" width="3" height="42" x="80" y="45">
+    <animate attributeName="x" 
+             values="80;110;125;140;170;200;225;245;270;310" 
+             dur="3s" 
+             begin="0s; secondLineErase.end+1s" 
+             id="firstCursorMove" 
+             repeatCount="1" 
+             calcMode="discrete" />
+    <animate attributeName="opacity" 
+             values="1;0" 
+             dur="0.1s" 
+             begin="firstCursorMove.end" 
+             fill="freeze" 
+             id="firstCursorHide" />
+    <animate attributeName="y" 
+             values="45;105" 
+             dur="0.1s" 
+             begin="firstLineErase.end+0.5s" 
+             fill="freeze" />
+    <animate attributeName="opacity" 
+             values="0;1" 
+             dur="0.1s" 
+             begin="firstLineErase.end+0.5s" 
+             fill="freeze" 
+             id="secondCursorShow" />
+    <animate attributeName="x" 
+             values="80;95;105;140;155;185;210;225;250;275;290;315;340;360;385;405;430;465;490;515;530" 
+             dur="5s" 
+             begin="secondCursorShow.end" 
+             id="secondCursorMove" 
+             repeatCount="1" 
+             calcMode="discrete" />
+    <animate attributeName="opacity" 
+             values="1;0" 
+             dur="0.1s" 
+             begin="secondCursorMove.end" 
+             fill="freeze" />
+    <animate attributeName="y" 
+             values="105;45" 
+             dur="0.1s" 
+             begin="secondLineErase.end+0.9s" 
+             fill="freeze" />
+    <animate attributeName="opacity" 
+             values="0;1" 
+             dur="0.1s" 
+             begin="secondLineErase.end+0.9s" 
+             fill="freeze" />
+  </rect>
+  
+  <!-- First phrase: "Hi There!" -->
+  <text x="80" y="80" class="letter" style="font-size: 42px; opacity: 0;">
+    <animate attributeName="opacity" values="0;1" dur="0.1s" begin="0s; secondLineErase.end+1s" fill="freeze" />
+    <animate attributeName="opacity" values="1;0" dur="0.1s" begin="firstCursorMove.end+0.5s" fill="freeze" id="firstLineErase" />
+    H
+  </text>
+  <text x="110" y="80" class="letter" style="font-size: 42px; opacity: 0;">
+    <animate attributeName="opacity" values="0;1" dur="0.1s" begin="0.3s; secondLineErase.end+1.3s" fill="freeze" />
+    <animate attributeName="opacity" values="1;0" dur="0.1s" begin="firstCursorMove.end+0.5s" fill="freeze" />
+    i
+  </text>
+  <text x="125" y="80" class="letter" style="font-size: 42px; opacity: 0;">
+    <animate attributeName="opacity" values="0;1" dur="0.1s" begin="0.6s; secondLineErase.end+1.6s" fill="freeze" />
+    <animate attributeName="opacity" values="1;0" dur="0.1s" begin="firstCursorMove.end+0.5s" fill="freeze" />
+     
+  </text>
+  <text x="140" y="80" class="letter" style="font-size: 42px; opacity: 0;">
+    <animate attributeName="opacity" values="0;1" dur="0.1s" begin="0.9s; secondLineErase.end+1.9s" fill="freeze" />
+    <animate attributeName="opacity" values="1;0" dur="0.1s" begin="firstCursorMove.end+0.5s" fill="freeze" />
+    T
+  </text>
+  <text x="170" y="80" class="letter" style="font-size: 42px; opacity: 0;">
+    <animate attributeName="opacity" values="0;1" dur="0.1s" begin="1.2s; secondLineErase.end+2.2s" fill="freeze" />
+    <animate attributeName="opacity" values="1;0" dur="0.1s" begin="firstCursorMove.end+0.5s" fill="freeze" />
+    h
+  </text>
+  <text x="200" y="80" class="letter" style="font-size: 42px; opacity: 0;">
+    <animate attributeName="opacity" values="0;1" dur="0.1s" begin="1.5s; secondLineErase.end+2.5s" fill="freeze" />
+    <animate attributeName="opacity" values="1;0" dur="0.1s" begin="firstCursorMove.end+0.5s" fill="freeze" />
+    e
+  </text>
+  <text x="225" y="80" class="letter" style="font-size: 42px; opacity: 0;">
+    <animate attributeName="opacity" values="0;1" dur="0.1s" begin="1.8s; secondLineErase.end+2.8s" fill="freeze" />
+    <animate attributeName="opacity" values="1;0" dur="0.1s" begin="firstCursorMove.end+0.5s" fill="freeze" />
+    r
+  </text>
+  <text x="245" y="80" class="letter" style="font-size: 42px; opacity: 0;">
+    <animate attributeName="opacity" values="0;1" dur="0.1s" begin="2.1s; secondLineErase.end+3.1s" fill="freeze" />
+    <animate attributeName="opacity" values="1;0" dur="0.1s" begin="firstCursorMove.end+0.5s" fill="freeze" />
+    e
+  </text>
+  <text x="270" y="80" class="letter" style="font-size: 42px; opacity: 0;">
+    <animate attributeName="opacity" values="0;1" dur="0.1s" begin="2.4s; secondLineErase.end+3.4s" fill="freeze" />
+    <animate attributeName="opacity" values="1;0" dur="0.1s" begin="firstCursorMove.end+0.5s" fill="freeze" />
+    !
+  </text>
+  
+  <!-- Waving hand emoji -->
+  <text x="310" y="80" class="waving-hand" opacity="0">
+    <animate attributeName="opacity" values="0;1" dur="0.1s" begin="2.7s; secondLineErase.end+3.7s" fill="freeze" />
+    <animate attributeName="opacity" values="1;0" dur="0.1s" begin="firstCursorMove.end+0.5s" fill="freeze" />
+    👋
+  </text>
+  
+  <!-- Second phrase: "I'm Anton Luckshman!" -->
+  <text x="80" y="140" class="letter" style="font-size: 42px; opacity: 0;">
+    <animate attributeName="opacity" values="0;1" dur="0.1s" begin="firstLineErase.end+0.6s" fill="freeze" />
+    <animate attributeName="opacity" values="1;0" dur="0.1s" begin="secondCursorMove.end+0.5s" fill="freeze" id="secondLineErase" />
+    I
+  </text>
+  <text x="95" y="140" class="letter" style="font-size: 42px; opacity: 0;">
+    <animate attributeName="opacity" values="0;1" dur="0.1s" begin="firstLineErase.end+0.8s" fill="freeze" />
+    <animate attributeName="opacity" values="1;0" dur="0.1s" begin="secondCursorMove.end+0.5s" fill="freeze" />
+    '
+  </text>
+  <text x="105" y="140" class="letter" style="font-size: 42px; opacity: 0;">
+    <animate attributeName="opacity" values="0;1" dur="0.1s" begin="firstLineErase.end+1.0s" fill="freeze" />
+    <animate attributeName="opacity" values="1;0" dur="0.1s" begin="secondCursorMove.end+0.5s" fill="freeze" />
+    m
+  </text>
+  <text x="140" y="140" class="letter" style="font-size: 42px; opacity: 0;">
+    <animate attributeName="opacity" values="0;1" dur="0.1s" begin="firstLineErase.end+1.2s" fill="freeze" />
+    <animate attributeName="opacity" values="1;0" dur="0.1s" begin="secondCursorMove.end+0.5s" fill="freeze" />
+     
+  </text>
+  <text x="155" y="140" class="letter" style="font-size: 42px; opacity: 0;">
+    <animate attributeName="opacity" values="0;1" dur="0.1s" begin="firstLineErase.end+1.4s" fill="freeze" />
+    <animate attributeName="opacity" values="1;0" dur="0.1s" begin="secondCursorMove.end+0.5s" fill="freeze" />
+    A
+  </text>
+  <text x="185" y="140" class="letter" style="font-size: 42px; opacity: 0;">
+    <animate attributeName="opacity" values="0;1" dur="0.1s" begin="firstLineErase.end+1.6s" fill="freeze" />
+    <animate attributeName="opacity" values="1;0" dur="0.1s" begin="secondCursorMove.end+0.5s" fill="freeze" />
+    n
+  </text>
+  <text x="210" y="140" class="letter" style="font-size: 42px; opacity: 0;">
+    <animate attributeName="opacity" values="0;1" dur="0.1s" begin="firstLineErase.end+1.8s" fill="freeze" />
+    <animate attributeName="opacity" values="1;0" dur="0.1s" begin="secondCursorMove.end+0.5s" fill="freeze" />
+    t
+  </text>
+  <text x="225" y="140" class="letter" style="font-size: 42px; opacity: 0;">
+    <animate attributeName="opacity" values="0;1" dur="0.1s" begin="firstLineErase.end+2.0s" fill="freeze" />
+    <animate attributeName="opacity" values="1;0" dur="0.1s" begin="secondCursorMove.end+0.5s" fill="freeze" />
+    o
+  </text>
+  <text x="250" y="140" class="letter" style="font-size: 42px; opacity: 0;">
+    <animate attributeName="opacity" values="0;1" dur="0.1s" begin="firstLineErase.end+2.2s" fill="freeze" />
+    <animate attributeName="opacity" values="1;0" dur="0.1s" begin="secondCursorMove.end+0.5s" fill="freeze" />
+    n
+  </text>
+  <text x="275" y="140" class="letter" style="font-size: 42px; opacity: 0;">
+    <animate attributeName="opacity" values="0;1" dur="0.1s" begin="firstLineErase.end+2.4s" fill="freeze" />
+    <animate attributeName="opacity" values="1;0" dur="0.1s" begin="secondCursorMove.end+0.5s" fill="freeze" />
+     
+  </text>
+  <text x="290" y="140" class="letter" style="font-size: 42px; opacity: 0;">
+    <animate attributeName="opacity" values="0;1" dur="0.1s" begin="firstLineErase.end+2.6s" fill="freeze" />
+    <animate attributeName="opacity" values="1;0" dur="0.1s" begin="secondCursorMove.end+0.5s" fill="freeze" />
+    L
+  </text>
+  <text x="315" y="140" class="letter" style="font-size: 42px; opacity: 0;">
+    <animate attributeName="opacity" values="0;1" dur="0.1s" begin="firstLineErase.end+2.8s" fill="freeze" />
+    <animate attributeName="opacity" values="1;0" dur="0.1s" begin="secondCursorMove.end+0.5s" fill="freeze" />
+    u
+  </text>
+  <text x="340" y="140" class="letter" style="font-size: 42px; opacity: 0;">
+    <animate attributeName="opacity" values="0;1" dur="0.1s" begin="firstLineErase.end+3.0s" fill="freeze" />
+    <animate attributeName="opacity" values="1;0" dur="0.1s" begin="secondCursorMove.end+0.5s" fill="freeze" />
+    c
+  </text>
+  <text x="360" y="140" class="letter" style="font-size: 42px; opacity: 0;">
+    <animate attributeName="opacity" values="0;1" dur="0.1s" begin="firstLineErase.end+3.2s" fill="freeze" />
+    <animate attributeName="opacity" values="1;0" dur="0.1s" begin="secondCursorMove.end+0.5s" fill="freeze" />
+    k
+  </text>
+  <text x="385" y="140" class="letter" style="font-size: 42px; opacity: 0;">
+    <animate attributeName="opacity" values="0;1" dur="0.1s" begin="firstLineErase.end+3.4s" fill="freeze" />
+    <animate attributeName="opacity" values="1;0" dur="0.1s" begin="secondCursorMove.end+0.5s" fill="freeze" />
+    s
+  </text>
+  <text x="405" y="140" class="letter" style="font-size: 42px; opacity: 0;">
+    <animate attributeName="opacity" values="0;1" dur="0.1s" begin="firstLineErase.end+3.6s" fill="freeze" />
+    <animate attributeName="opacity" values="1;0" dur="0.1s" begin="secondCursorMove.end+0.5s" fill="freeze" />
+    h
+  </text>
+  <text x="430" y="140" class="letter" style="font-size: 42px; opacity: 0;">
+    <animate attributeName="opacity" values="0;1" dur="0.1s" begin="firstLineErase.end+3.8s" fill="freeze" />
+    <animate attributeName="opacity" values="1;0" dur="0.1s" begin="secondCursorMove.end+0.5s" fill="freeze" />
+    m
+  </text>
+  <text x="465" y="140" class="letter" style="font-size: 42px; opacity: 0;">
+    <animate attributeName="opacity" values="0;1" dur="0.1s" begin="firstLineErase.end+4.0s" fill="freeze" />
+    <animate attributeName="opacity" values="1;0" dur="0.1s" begin="secondCursorMove.end+0.5s" fill="freeze" />
+    a
+  </text>
+  <text x="490" y="140" class="letter" style="font-size: 42px; opacity: 0;">
+    <animate attributeName="opacity" values="0;1" dur="0.1s" begin="firstLineErase.end+4.2s" fill="freeze" />
+    <animate attributeName="opacity" values="1;0" dur="0.1s" begin="secondCursorMove.end+0.5s" fill="freeze" />
+    n
+  </text>
+  <text x="515" y="140" class="letter" style="font-size: 42px; opacity: 0;">
+    <animate attributeName="opacity" values="0;1" dur="0.1s" begin="firstLineErase.end+4.4s" fill="freeze" />
+    <animate attributeName="opacity" values="1;0" dur="0.1s" begin="secondCursorMove.end+0.5s" fill="freeze" />
+    !
+  </text>
+  
+  <!-- Subtle glow effect -->
+  <rect x="0" y="0" width="800" height="200" rx="15" ry="15" fill="url(#bgGradient)" opacity="0.1">
+    <animate attributeName="opacity" values="0.1;0.2;0.1" dur="5s" repeatCount="indefinite" />
+  </rect>
+</svg>

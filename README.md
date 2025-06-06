@@ -9,7 +9,7 @@
 
 ## 📩 DM Me to Collaborate
 [![Download CV](https://img.shields.io/badge/Download_CV-FF5722?style=for-the-badge&logo=adobe-acrobat-reader&logoColor=white)](https://yourwebsite.com/cv.pdf) 
-[![Portfolio](https://img.shields.io/badge/View_Portfolio-0077B5?style=for-the-badge&logo=notion&logoColor=white)](https://yourportfolio.com)
+[![Portfolio](https://img.shields.io/badge/View_Portfolio-0077B5?style=for-the-badge&logo=notion&logoColor=white)](https://antonluckshman.live)
 
 ## 🌐 Socials:
 [![Facebook](https://img.shields.io/badge/Facebook-%231877F2.svg?logo=Facebook&logoColor=white)](https://facebook.com/profile.php?id=100090531630192) [![Instagram](https://img.shields.io/badge/Instagram-%23E4405F.svg?logo=Instagram&logoColor=white)](https://instagram.com/antonluckshman) [![LinkedIn](https://img.shields.io/badge/LinkedIn-%230077B5.svg?logo=linkedin&logoColor=white)](https://linkedin.com/in/anton-luckshman-53121a265) [![email](https://img.shields.io/badge/Email-D14836?logo=gmail&logoColor=white)](mailto:antonluckshman2@gmail.com) 
